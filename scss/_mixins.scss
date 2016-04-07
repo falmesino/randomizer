@@ -1,0 +1,52 @@
+@mixin transition( $duration, $effect )
+{
+    // ease | linear | ease-in | ease-out | ease-in-out
+    -webkit-transition: $duration $effect;
+    -moz-transition:    $duration $effect;
+    -ms-transition:    $duration $effect;
+    -o-transition:      $duration $effect;
+    transition:         $duration $effect;
+}
+
+@mixin translateY( $y )
+{
+    -webkit-transform: translateY( $y );
+    -moz-transform: translateY( $y );
+    -ms-transform: translateY( $y );
+    -o-transform: translateY( $y );
+    transform: translateY( $y );
+}
+
+@mixin translateX( $x )
+{
+    -webkit-transform: translateX( $x );
+    -moz-transform: translateX( $x );
+    -ms-transform: translateX( $x );
+    -o-transform: translateX( $x );
+    transform: translateX( $x );
+}
+
+@mixin translate3d( $x, $y, $z )
+{
+    -webkit-transform: translate3d( $x, $y, $z );
+    -moz-transform: translate3d( $x, $y, $z );
+    -ms-transform: translate3d( $x, $y, $z );
+    -o-transform: translate3d( $x, $y, $z );
+    transform: translate3d( $x, $y, $z );
+}
+
+@mixin rotate( $d )
+{
+    -webkit-transform: rotate( $d );
+    -moz-transform: rotate( $d );
+    -ms-transform: rotate( $d );
+    -o-transform: rotate( $d );
+    transform: rotate( $d );
+}
+
+@mixin opacity( $opacity )
+{
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
